@@ -1,5 +1,5 @@
 /* ============================================
-   TAILOR HOAN - Professional Uniform Website
+   ĐỒNG PHỤC Y TẾ QUỲNH CHÂU - Professional Uniform Website
    Design System & Complete Styles
    ============================================ */
 
@@ -305,12 +305,12 @@ h1, h2, h3, h4, h5, h6 {
 .scissors-icon {
     font-size: 3rem;
     color: var(--color-primary);
-    animation: scissorsSnip 1s ease-in-out infinite;
+    animation: pulseIcon 1s ease-in-out infinite;
 }
 
-@keyframes scissorsSnip {
-    0%, 100% { transform: rotate(0deg) scale(1); }
-    50% { transform: rotate(15deg) scale(1.1); }
+@keyframes pulseIcon {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.15); opacity: 0.85; }
 }
 
 .preloader-text {
@@ -363,7 +363,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-logo:hover .logo-icon {
-    transform: rotate(-45deg);
+    transform: scale(1.15);
 }
 
 .logo-text {

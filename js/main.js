@@ -1,5 +1,5 @@
 /* ============================================
-   TAILOR HOAN - Main JavaScript
+   ĐỒNG PHỤC Y TẾ QUỲNH CHÂU - Main JavaScript
    Interactions, Animations & Functionality
    ============================================ */
 
