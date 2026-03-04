@@ -1,5 +1,5 @@
 /* ============================================
-   TAILOR HOÀN - Professional Uniform Website
+   TAILOR HOAN - Professional Uniform Website
    Design System & Complete Styles
    ============================================ */
 
@@ -432,6 +432,42 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--color-primary-dark);
     color: var(--color-white) !important;
     transform: translateY(-1px);
+}
+
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: var(--space-3);
+    background: var(--color-gray-100);
+    border-radius: var(--radius-full);
+    padding: 2px;
+}
+
+.lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-1) var(--space-3);
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    color: var(--color-gray-500);
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    line-height: 1.4;
+}
+
+.lang-btn:hover {
+    color: var(--color-primary);
+}
+
+.lang-btn.active {
+    background: var(--color-white);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-sm);
 }
 
 .nav-toggle {

@@ -1,5 +1,5 @@
 /* ============================================
-   TAILOR HOÀN - Main JavaScript
+   TAILOR HOAN - Main JavaScript
    Interactions, Animations & Functionality
    ============================================ */
 
@@ -452,7 +452,8 @@
             // Simulate form submission
             var submitBtn = form.querySelector('button[type="submit"]');
             var originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<span>Đang gửi...</span>';
+            var isVietnamese = document.documentElement.lang === 'vi';
+            submitBtn.innerHTML = '<span>' + (isVietnamese ? 'Đang gửi...' : 'Sending...') + '</span>';
             submitBtn.disabled = true;
 
             setTimeout(function () {
@@ -461,8 +462,8 @@
                     '<div class="form-success-icon">' +
                     '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>' +
                     '</div>' +
-                    '<h3>Gửi thành công!</h3>' +
-                    '<p>Cảm ơn bạn đã liên hệ. Chúng tôi sẽ phản hồi trong vòng 24 giờ.</p>' +
+                    '<h3>' + (isVietnamese ? 'Gửi thành công!' : 'Sent successfully!') + '</h3>' +
+                    '<p>' + (isVietnamese ? 'Cảm ơn bạn đã liên hệ. Chúng tôi sẽ phản hồi trong vòng 24 giờ.' : 'Thank you for contacting us. We will respond within 24 hours.') + '</p>' +
                     '</div>';
             }, 1500);
         });
