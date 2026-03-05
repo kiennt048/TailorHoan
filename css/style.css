@@ -696,6 +696,14 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
 }
 
+.hero-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+}
+
 .floating-badge {
     position: absolute;
     display: flex;
@@ -808,6 +816,14 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.about-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
 }
 
 .about-experience-badge {
@@ -971,7 +987,16 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform var(--transition-slow);
 }
 
-.product-card:hover .product-image svg {
+.product-photo {
+    width: 100%;
+    height: 360px;
+    display: block;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.product-card:hover .product-image svg,
+.product-card:hover .product-photo {
     transform: scale(1.05);
 }
 
@@ -1194,6 +1219,18 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--fw-medium);
     color: var(--color-gray-600);
     opacity: 0.8;
+}
+
+.gallery-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-slow);
+}
+
+.gallery-item:hover .gallery-photo {
+    transform: scale(1.08);
 }
 
 .gallery-overlay {
