@@ -18,17 +18,23 @@
      Fill elements from site-config.js. Anything the owner has not supplied
      is REMOVED from the DOM rather than shown as a placeholder — a fake
      phone number is a real number belonging to somebody else.             */
+  // Any config key may carry a "<key>_en" sibling used on the English page.
+  function cfg(key) {
+    if (!VI && CFG[key + '_en']) return CFG[key + '_en'];
+    return CFG[key];
+  }
+
   function applyConfig() {
     // data-cfg-text="phone" -> textContent
     $$('[data-cfg-text]').forEach(function (el) {
-      var v = CFG[el.getAttribute('data-cfg-text')];
+      var v = cfg(el.getAttribute('data-cfg-text'));
       if (v) { el.innerHTML = v; } else { el.textContent = ''; }
     });
 
     // data-cfg-href="tel:phone" / "zalo:zalo" / "mailto:email" / "url:facebook"
     $$('[data-cfg-href]').forEach(function (el) {
       var spec = el.getAttribute('data-cfg-href').split(':');
-      var v = CFG[spec[1]];
+      var v = cfg(spec[1]);
       if (!v) return;
       var scheme = spec[0];
       if (scheme === 'tel') el.href = 'tel:' + v.replace(/[^\d+]/g, '');
@@ -39,7 +45,7 @@
 
     // data-requires="phone zalo" -> remove element unless every key is set
     $$('[data-requires]').forEach(function (el) {
-      var ok = el.getAttribute('data-requires').split(/\s+/).every(function (k) { return !!CFG[k]; });
+      var ok = el.getAttribute('data-requires').split(/\s+/).every(function (k) { return !!cfg(k); });
       if (!ok && el.parentNode) el.parentNode.removeChild(el);
     });
 

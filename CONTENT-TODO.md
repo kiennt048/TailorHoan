@@ -16,14 +16,24 @@ tương ứng **tự động biến mất** trên cả hai ngôn ngữ. Chỉ c�
 
 | Trường | Ý nghĩa | Trạng thái |
 |---|---|---|
-| `phone` | Số điện thoại chính, dạng `0912345678` | ⬜ trống |
+| `phone` | Số điện thoại chính | ✅ `081 8825008` |
+| `zalo` | Số Zalo / ID Official Account | ✅ `0818825008` |
+| `email` | Email nhận yêu cầu báo giá | ✅ `trungphong921@gmail.com` |
+| `address` | Địa chỉ xưởng / cửa hàng | ⚠️ mới có tỉnh/thành: `TP. Hồ Chí Minh` |
 | `phoneAlt` | Số bàn / hotline phụ | ⬜ trống |
-| `zalo` | Số đã đăng ký Zalo, hoặc ID Official Account | ⬜ trống |
-| `email` | Email nhận yêu cầu báo giá | ⬜ trống |
-| `address` | Địa chỉ xưởng / cửa hàng | ⬜ trống |
 | `hours`, `hoursAlt` | Giờ làm việc | ⬜ trống |
 | `taxId` | MST / GPKD — khách B2B hay hỏi | ⬜ trống |
 | `facebook`, `instagram` | Link thật (bỏ trống nếu chưa có) | ⬜ trống |
+
+> **Địa chỉ mới ở mức tỉnh/thành.** Nên bổ sung số nhà + đường + quận để khách
+> tin tưởng và để sau này bật được `LocalBusiness` schema + Google Maps.
+>
+> **Trường nào cũng có thể thêm hậu tố `_en`** cho bản tiếng Anh
+> (đang dùng: `address_en: "Ho Chi Minh City"`).
+>
+> ⚠️ Số điện thoại, email và Zalo còn được **ghi cứng trong JSON-LD** của cả hai
+> file HTML (crawler cần dữ liệu tĩnh). Sửa `site-config.js` thì phải sửa cả đó.
+> `bash tools/parity.sh` sẽ báo lỗi nếu hai nơi lệch nhau.
 
 > **Khuyến nghị Zalo:** đăng ký Official Account miễn phí tại <https://oa.zalo.me>.
 > Zalo là kênh khách Việt Nam dùng nhiều nhất cho loại đơn hàng này.
@@ -49,12 +59,18 @@ Toàn bộ ảnh hiện tại là ảnh kho từ Unsplash và đã được ghi 
 > của mình, và không đảm bảo quyền hình ảnh của người trong ảnh.
 
 ## 4. Bảng chất liệu — mục "Chất liệu"
-Bảng đang để **"Đang cập nhật"**. Chỉ điền khi có chứng từ từ nhà cung cấp vải.
+Bảng cũ toàn ô **"Đang cập nhật"** đã bị bỏ — một bảng trống một nửa trông như
+web chưa làm xong. Thay bằng 3 thẻ mô tả **cách chúng tôi chọn vải cùng khách**,
+đều là điều đúng sự thật và không cần số liệu kiểm định.
 
-- [ ] Tên vải, thành phần (VD: 65% polyester / 35% cotton), định lượng (g/m²).
+Khi có chứng từ từ nhà cung cấp vải:
+- [ ] Dán bảng thông số vào chỗ đã đánh dấu trong mục `#materials`
+      (mẫu markup có sẵn trong comment, CSS `.spec-table` cũng đã có sẵn).
+- [ ] Điền tên vải, thành phần (VD: 65% polyester / 35% cotton), định lượng (g/m²).
 - [ ] **Không** ghi "kháng khuẩn", "chống nhăn", "chịu giặt 90°C" nếu chưa có phiếu
       kiểm định. Quảng cáo sai công dụng bị xử phạt theo **Luật Quảng cáo 2012 (Điều 8)**
       và **NĐ 38/2021/NĐ-CP**.
+- [ ] Nhớ làm ở **cả `index.html` và `en.html`**.
 
 ## 5. Đánh giá khách hàng
 Bốn đánh giá cũ đã bị **xoá** vì được gán cho người và tổ chức không có thật.
@@ -73,8 +89,9 @@ kiểm chứng được. Nếu muốn nêu thâm niên, hãy ghi **năm thành l
 ## 7. Tên miền & Schema
 - [ ] Xác nhận `www.dongphucytequynhchau.com` đúng là tên miền của bạn — nó đang
       được hardcode trong canonical, hreflang, sitemap và JSON-LD.
-- [ ] Khi đã có địa chỉ + số điện thoại thật, thêm khối `LocalBusiness` vào JSON-LD
-      (hiện đang dùng `Organization` vì `LocalBusiness` bắt buộc phải có địa chỉ thật).
+- [ ] JSON-LD hiện là `Organization` kèm `telephone`, `email`, `sameAs` (Zalo) và
+      địa chỉ ở mức tỉnh/thành. Khi có **địa chỉ đường phố đầy đủ**, đổi sang
+      `LocalBusiness` và bổ sung `streetAddress` + `openingHoursSpecification`.
 
 ---
 
