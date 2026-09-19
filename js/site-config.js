@@ -12,8 +12,8 @@
    ========================================================================== */
 window.SITE_CONFIG = {
 
-  /* Số điện thoại chính. VD dạng đúng: "0912345678" (không dấu cách, không +84) */
-  phone: "",
+  /* Số điện thoại chính. Hiển thị y như viết ở đây; link tel: tự bỏ dấu cách. */
+  phone: "081 8825008",
 
   /* Số bàn / hotline phụ (không bắt buộc) */
   phoneAlt: "",
