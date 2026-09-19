@@ -1,0 +1,18 @@
+# Files in this directory that must NOT be served publicly.
+# Workers static assets uploads EVERYTHING in `assets.directory` by default —
+# unlike Pages, it does not skip .git / node_modules / dotfiles, and .gitignore
+# has no effect here. Without this file, `"directory": "."` would publish the
+# full git history at /.git/ .
+# Same syntax as .gitignore. (_headers is parsed by Workers, never served.)
+
+.git
+.gitignore
+.assetsignore
+wrangler.jsonc
+node_modules
+.DS_Store
+.wrangler
+
+# Internal docs and tooling — not part of the website
+CONTENT-TODO.md
+tools
