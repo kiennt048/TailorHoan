@@ -20,13 +20,15 @@ window.SITE_CONFIG = {
 
   /* Zalo: số điện thoại đã đăng ký Zalo, hoặc ID Official Account từ oa.zalo.me
      Link sẽ thành https://zalo.me/<giá trị này> */
-  zalo: "",
+  zalo: "0818825008",
 
   /* Email nhận yêu cầu báo giá */
-  email: "",
+  email: "trungphong921@gmail.com",
 
-  /* Địa chỉ xưởng / cửa hàng, dùng <br> để xuống dòng */
-  address: "",
+  /* Địa chỉ xưởng / cửa hàng, dùng <br> để xuống dòng.
+     Hậu tố _en = bản tiếng Anh, tự dùng cho en.html (áp dụng cho mọi trường). */
+  address: "TP. Hồ Chí Minh",
+  address_en: "Ho Chi Minh City",
 
   /* Giờ làm việc — 2 dòng */
   hours: "",
