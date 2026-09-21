@@ -47,16 +47,12 @@ là chưa gửi được và mời gọi / nhắn Zalo.
 3. Gửi thử một yêu cầu và kiểm tra hộp thư.
 4. **Kiểm tra lại mỗi tháng** — nếu email hỏng, lead sẽ mất mà không ai biết.
 
-## 3. Ảnh thật (quan trọng)
-Toàn bộ ảnh hiện tại là ảnh kho từ Unsplash và đã được ghi rõ **"mang tính minh hoạ"**
-ở mục Hình ảnh và ở chân trang.
+## 3. Ảnh thật ✅ ĐÃ XONG (phần lớn)
+Đã nhận 18 ảnh studio của tiệm và đưa lên toàn bộ 16 vị trí ảnh. Ảnh kho Unsplash
+đã bị gỡ hết, dòng "hình ảnh mang tính minh hoạ" cũng đã xoá.
 
-- [ ] Chụp ảnh thật: xưởng may, sản phẩm đã giao, nhân viên đang làm việc.
-- [ ] Thay ảnh trong `index.html` và `en.html` (cùng vị trí ở cả 2 file).
-- [ ] Sau khi thay hết ảnh thật, **xoá** dòng ghi chú minh hoạ ở mục Hình ảnh và chân trang.
-
-> Giấy phép Unsplash **không** cho phép dùng ảnh để ngụ ý đó là sản phẩm/nhân sự
-> của mình, và không đảm bảo quyền hình ảnh của người trong ảnh.
+Còn thiếu: ảnh 4 ngành chưa có (nhà trẻ, trường học, nhà hàng, spa) và **ảnh xưởng
+đang làm việc** — xem `IMAGE-SHOTLIST.md`.
 
 ## 4. Bảng chất liệu — mục "Chất liệu"
 Bảng cũ toàn ô **"Đang cập nhật"** đã bị bỏ — một bảng trống một nửa trông như

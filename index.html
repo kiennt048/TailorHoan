@@ -38,8 +38,7 @@
 
 <link rel="preload" href="fonts/bvp-400-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/bvp-700-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-<link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800&h=1000&fit=crop&q=80">
+<link rel="preload" as="image" fetchpriority="high" href="images/hero-doctors.webp" type="image/webp">
 <link rel="stylesheet" href="css/style.css">
 
 <!-- Marks JS as alive so scroll-reveal may hide sections. Without it nothing is hidden. -->
@@ -153,11 +152,10 @@
         </ul>
       </div>
       <div class="hero-figure">
-        <div class="media">
-          <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800&h=1000&fit=crop&q=80"
-               alt="Áo blouse trắng dài tay với ống nghe" width="800" height="1000"
-               fetchpriority="high" decoding="async" class="hero-photo">
-        </div>
+        <div class="media"><picture>
+            <source srcset="images/hero-doctors.webp" type="image/webp">
+            <img src="images/hero-doctors.jpg" alt="Bác sĩ nam và nữ mặc áo blouse trắng khoác ngoài bộ scrubs xanh" width="1000" height="1250" fetchpriority="high" decoding="async" class="hero-photo">
+          </picture></div>
       </div>
     </div>
   </section>
@@ -166,23 +164,25 @@
   <section id="about" class="section" tabindex="-1">
     <div class="container about-grid">
       <div class="reveal">
-        <div class="media">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=750&fit=crop&q=80"
-               alt="Máy may công nghiệp trong xưởng may" width="600" height="750"
-               loading="lazy" decoding="async" class="about-photo">
-        </div>
+        <figure class="owner-figure">
+          <div class="media"><picture>
+            <source srcset="images/owner-hoan.webp" type="image/webp">
+            <img src="images/owner-hoan.jpg" alt="Cô Hoan, chủ tiệm may Quỳnh Châu" width="900" height="1125" loading="lazy" decoding="async" class="about-photo">
+          </picture></div>
+          <figcaption><strong>Cô Hoan</strong>Chủ tiệm may Quỳnh Châu</figcaption>
+        </figure>
       </div>
       <div class="reveal d1">
         <span class="section-tag">Về chúng tôi</span>
         <h2>Tận tâm trong từng đường kim mũi chỉ</h2>
         <p class="lead">
-          <strong>Quỳnh Châu</strong> chuyên may đo đồng phục y tế — áo blouse bác sĩ, scrubs y tá,
-          đồng phục điều dưỡng, phòng mổ, kỹ thuật viên và dược sĩ.
+          <strong>Cô Hoan</strong> — chủ tiệm — trực tiếp theo từng đơn hàng, từ khâu chọn vải,
+          lên rập, cắt may cho đến lúc giao.
         </p>
         <p>
-          Ngoài y tế, chúng tôi cũng nhận may đồng phục cho nhà trẻ, trường học, thẩm mỹ viện,
-          khách sạn và nhà hàng. Mỗi đơn hàng đều được chăm chút từ khâu chọn vải, lên rập,
-          cắt may cho đến hoàn thiện.
+          <strong>Quỳnh Châu</strong> chuyên may đo đồng phục y tế: áo blouse bác sĩ, scrubs phòng mổ,
+          đồng phục điều dưỡng, kỹ thuật viên và dược sĩ. Ngoài ra chúng tôi nhận may đồng phục
+          lễ tân và văn phòng cho khách sạn, doanh nghiệp, cùng đồng phục nhà trẻ, trường học và nhà hàng.
         </p>
         <div class="about-features">
           <div class="about-feature">
@@ -223,23 +223,25 @@
       <div class="section-header center reveal">
         <span class="section-tag">Sản phẩm</span>
         <h2>Đồng phục y tế và các ngành khác</h2>
-        <p class="section-subtitle">Trọng tâm của chúng tôi là đồng phục y tế. Ngoài ra còn phục vụ giáo dục và dịch vụ.</p>
+        <p class="section-subtitle">Trọng tâm của chúng tôi là đồng phục y tế. Ngoài ra còn nhận đồng phục lễ tân và văn phòng.</p>
       </div>
 
       <div class="product-filter" role="group" aria-label="Lọc sản phẩm theo ngành">
         <button class="filter-btn" data-filter="all" aria-pressed="true">Tất cả</button>
         <button class="filter-btn" data-filter="medical" aria-pressed="false">Y tế</button>
-        <button class="filter-btn" data-filter="education" aria-pressed="false">Giáo dục</button>
-        <button class="filter-btn" data-filter="hospitality" aria-pressed="false">Dịch vụ</button>
+        <button class="filter-btn" data-filter="office" aria-pressed="false">Văn phòng &amp; lễ tân</button>
       </div>
       <p id="productCount" class="sr-only" role="status" aria-live="polite"></p>
 
       <div class="product-grid">
         <article class="product-card reveal" data-category="medical">
-          <div class="media"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&h=720&fit=crop&q=80" alt="Áo blouse trắng dài tay" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+          <div class="media"><picture>
+            <source srcset="images/p-blouse-bacsi.webp" type="image/webp">
+            <img src="images/p-blouse-bacsi.jpg" alt="Blouse trắng dáng dài, cổ bẻ, hai túi dưới — may đo cho bác sĩ." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
             <h3 class="product-name">Áo Blouse Bác Sĩ</h3>
-            <p class="product-desc">Áo blouse trắng dài tay, dáng cổ điển, may theo số đo cho bác sĩ và dược sĩ.</p>
+            <p class="product-desc">Blouse trắng dáng dài, cổ bẻ, hai túi dưới — may đo cho bác sĩ.</p>
             <div class="product-meta">
               <span class="product-category-tag">Y tế</span>
               <a href="#contact" class="product-link" data-service="doctor">Đặt hàng<span class="sr-only"> Áo Blouse Bác Sĩ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -248,34 +250,58 @@
         </article>
 
         <article class="product-card reveal d1" data-category="medical">
-          <div class="media"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=720&fit=crop&q=80" alt="Bộ scrubs y tá" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+          <div class="media"><picture>
+            <source srcset="images/p-blouse-nu.webp" type="image/webp">
+            <img src="images/p-blouse-nu.jpg" alt="Blouse nữ dáng ôm nhẹ, tay dài, phù hợp phòng khám và nhà thuốc." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Bộ Scrubs Y Tá</h3>
-            <p class="product-desc">Bộ scrubs áo và quần, nhiều lựa chọn màu, form rộng thoải mái cho ca trực.</p>
+            <h3 class="product-name">Áo Blouse Nữ / Dược Sĩ</h3>
+            <p class="product-desc">Blouse nữ dáng ôm nhẹ, tay dài, phù hợp phòng khám và nhà thuốc.</p>
             <div class="product-meta">
               <span class="product-category-tag">Y tế</span>
-              <a href="#contact" class="product-link" data-service="nurse">Đặt hàng<span class="sr-only"> Bộ Scrubs Y Tá</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#contact" class="product-link" data-service="pharmacy">Đặt hàng<span class="sr-only"> Áo Blouse Nữ / Dược Sĩ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
         <article class="product-card reveal d2" data-category="medical">
-          <div class="media"><img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=600&h=720&fit=crop&q=80" alt="Trang phục phòng mổ màu xanh" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+          <div class="media"><picture>
+            <source srcset="images/p-scrubs-phongmo.webp" type="image/webp">
+            <img src="images/p-scrubs-phongmo.jpg" alt="Bộ scrubs xanh cổ tim, áo và quần rời, form rộng dễ vận động." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Đồng Phục Phòng Mổ</h3>
-            <p class="product-desc">Bộ đồng phục phòng mổ gồm áo, quần và mũ, may theo quy cách của từng bệnh viện.</p>
+            <h3 class="product-name">Bộ Scrubs Phòng Mổ</h3>
+            <p class="product-desc">Bộ scrubs xanh cổ tim, áo và quần rời, form rộng dễ vận động.</p>
             <div class="product-meta">
               <span class="product-category-tag">Y tế</span>
-              <a href="#contact" class="product-link" data-service="surgical">Đặt hàng<span class="sr-only"> Đồng Phục Phòng Mổ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#contact" class="product-link" data-service="surgical">Đặt hàng<span class="sr-only"> Bộ Scrubs Phòng Mổ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
         <article class="product-card reveal" data-category="medical">
-          <div class="media"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=720&fit=crop&q=80" alt="Đồng phục điều dưỡng" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+          <div class="media"><picture>
+            <source srcset="images/p-scrubs-nganhtay.webp" type="image/webp">
+            <img src="images/p-scrubs-nganhtay.jpg" alt="Scrubs ngắn tay có túi hông, thoải mái cho ca trực dài." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
+          <div class="product-info">
+            <h3 class="product-name">Scrubs Ngắn Tay</h3>
+            <p class="product-desc">Scrubs ngắn tay có túi hông, thoải mái cho ca trực dài.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Y tế</span>
+              <a href="#contact" class="product-link" data-service="nurse">Đặt hàng<span class="sr-only"> Scrubs Ngắn Tay</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal d1" data-category="medical">
+          <div class="media"><picture>
+            <source srcset="images/p-dieuduong.webp" type="image/webp">
+            <img src="images/p-dieuduong.jpg" alt="Bộ trắng viền xanh, áo tunic và quần, kiểu dáng cổ điển của ngành." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
             <h3 class="product-name">Đồng Phục Điều Dưỡng</h3>
-            <p class="product-desc">Đồng phục điều dưỡng dễ vận động, thiết kế túi tiện dụng cho ca trực dài.</p>
+            <p class="product-desc">Bộ trắng viền xanh, áo tunic và quần, kiểu dáng cổ điển của ngành.</p>
             <div class="product-meta">
               <span class="product-category-tag">Y tế</span>
               <a href="#contact" class="product-link" data-service="nursing">Đặt hàng<span class="sr-only"> Đồng Phục Điều Dưỡng</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -283,90 +309,86 @@
           </div>
         </article>
 
-        <article class="product-card reveal d1" data-category="medical">
-          <div class="media"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&h=720&fit=crop&q=80" alt="Trang phục phụ mổ và hộ sinh" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
-          <div class="product-info">
-            <h3 class="product-name">Đồng Phục Phụ Mổ</h3>
-            <p class="product-desc">Đồng phục cho phụ mổ, hộ sinh và kỹ thuật viên phòng mổ.</p>
-            <div class="product-meta">
-              <span class="product-category-tag">Y tế</span>
-              <a href="#contact" class="product-link" data-service="surgical">Đặt hàng<span class="sr-only"> Đồng Phục Phụ Mổ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-            </div>
-          </div>
-        </article>
-
         <article class="product-card reveal d2" data-category="medical">
-          <div class="media"><img src="https://images.unsplash.com/photo-1582719471384-894fbb16f461?w=600&h=720&fit=crop&q=80" alt="Kỹ thuật viên xét nghiệm mặc áo blouse" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+          <div class="media"><picture>
+            <source srcset="images/p-dieuduong-ngan.webp" type="image/webp">
+            <img src="images/p-dieuduong-ngan.jpg" alt="Tunic ngắn tay viền xanh, nhiều túi, dễ giặt và mau khô." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Đồng Phục Kỹ Thuật Viên</h3>
-            <p class="product-desc">Áo blouse và đồng phục cho kỹ thuật viên xét nghiệm, chẩn đoán hình ảnh, dược sĩ.</p>
+            <h3 class="product-name">Điều Dưỡng Ngắn Tay</h3>
+            <p class="product-desc">Tunic ngắn tay viền xanh, nhiều túi, dễ giặt và mau khô.</p>
             <div class="product-meta">
               <span class="product-category-tag">Y tế</span>
-              <a href="#contact" class="product-link" data-service="technician">Đặt hàng<span class="sr-only"> Đồng Phục Kỹ Thuật Viên</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#contact" class="product-link" data-service="nursing">Đặt hàng<span class="sr-only"> Điều Dưỡng Ngắn Tay</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
-        <article class="product-card reveal" data-category="education">
-          <div class="media"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=720&fit=crop&q=80" alt="Trẻ nhỏ mặc đồng phục nhà trẻ" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+        <article class="product-card reveal" data-category="office">
+          <div class="media"><picture>
+            <source srcset="images/p-letan-nam.webp" type="image/webp">
+            <img src="images/p-letan-nam.jpg" alt="Sơ mi trắng, cà vạt và quần âu — chuẩn lễ tân, văn phòng." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Đồng Phục Nhà Trẻ</h3>
-            <p class="product-desc">Đồng phục cho bé với chất vải mềm, nhiều màu sắc theo yêu cầu của trường.</p>
+            <h3 class="product-name">Đồng Phục Lễ Tân Nam</h3>
+            <p class="product-desc">Sơ mi trắng, cà vạt và quần âu — chuẩn lễ tân, văn phòng.</p>
             <div class="product-meta">
-              <span class="product-category-tag">Giáo dục</span>
-              <a href="#contact" class="product-link" data-service="kindergarten">Đặt hàng<span class="sr-only"> Đồng Phục Nhà Trẻ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <span class="product-category-tag">Văn phòng</span>
+              <a href="#contact" class="product-link" data-service="reception">Đặt hàng<span class="sr-only"> Đồng Phục Lễ Tân Nam</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
-        <article class="product-card reveal d1" data-category="education">
-          <div class="media"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=720&fit=crop&q=80" alt="Học sinh mặc đồng phục trường học" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+        <article class="product-card reveal d1" data-category="office">
+          <div class="media"><picture>
+            <source srcset="images/p-letan-nu.webp" type="image/webp">
+            <img src="images/p-letan-nu.jpg" alt="Sơ mi trắng tay dài và chân váy bút chì, dáng gọn gàng." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Đồng Phục Học Sinh</h3>
-            <p class="product-desc">Đồng phục trường học bền, dễ giặt, thiết kế theo mẫu riêng của từng trường.</p>
+            <h3 class="product-name">Đồng Phục Lễ Tân Nữ</h3>
+            <p class="product-desc">Sơ mi trắng tay dài và chân váy bút chì, dáng gọn gàng.</p>
             <div class="product-meta">
-              <span class="product-category-tag">Giáo dục</span>
-              <a href="#contact" class="product-link" data-service="school">Đặt hàng<span class="sr-only"> Đồng Phục Học Sinh</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <span class="product-category-tag">Văn phòng</span>
+              <a href="#contact" class="product-link" data-service="reception">Đặt hàng<span class="sr-only"> Đồng Phục Lễ Tân Nữ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
-        <article class="product-card reveal d2" data-category="hospitality">
-          <div class="media"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=720&fit=crop&q=80" alt="Nhân viên spa mặc áo tunic" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+        <article class="product-card reveal d2" data-category="office">
+          <div class="media"><picture>
+            <source srcset="images/p-vest-nu.webp" type="image/webp">
+            <img src="images/p-vest-nu.jpg" alt="Vest peplum tay ngắn, cúc bọc, dáng tôn eo." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Đồng Phục Thẩm Mỹ Viện</h3>
-            <p class="product-desc">Áo tunic thanh lịch, kiểu dáng hiện đại cho spa và thẩm mỹ viện.</p>
+            <h3 class="product-name">Vest Nữ Công Sở</h3>
+            <p class="product-desc">Vest peplum tay ngắn, cúc bọc, dáng tôn eo.</p>
             <div class="product-meta">
-              <span class="product-category-tag">Dịch vụ</span>
-              <a href="#contact" class="product-link" data-service="spa">Đặt hàng<span class="sr-only"> Đồng Phục Thẩm Mỹ Viện</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <span class="product-category-tag">Văn phòng</span>
+              <a href="#contact" class="product-link" data-service="office-vest">Đặt hàng<span class="sr-only"> Vest Nữ Công Sở</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
-        <article class="product-card reveal" data-category="hospitality">
-          <div class="media"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=720&fit=crop&q=80" alt="Không gian lễ tân khách sạn" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+        <article class="product-card reveal" data-category="office">
+          <div class="media"><picture>
+            <source srcset="images/p-vanphong-doi.webp" type="image/webp">
+            <img src="images/p-vanphong-doi.jpg" alt="Bộ đồng phục đồng bộ cho cả nam và nữ trong cùng một đơn vị." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Đồng Phục Khách Sạn</h3>
-            <p class="product-desc">Vest, áo sơ mi và quần tây cho lễ tân, buồng phòng và quản lý.</p>
+            <h3 class="product-name">Đồng Phục Văn Phòng</h3>
+            <p class="product-desc">Bộ đồng phục đồng bộ cho cả nam và nữ trong cùng một đơn vị.</p>
             <div class="product-meta">
-              <span class="product-category-tag">Dịch vụ</span>
-              <a href="#contact" class="product-link" data-service="hotel">Đặt hàng<span class="sr-only"> Đồng Phục Khách Sạn</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card reveal d1" data-category="hospitality">
-          <div class="media"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&h=720&fit=crop&q=80" alt="Đầu bếp mặc đồng phục bếp" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
-          <div class="product-info">
-            <h3 class="product-name">Đồng Phục Nhà Hàng</h3>
-            <p class="product-desc">Đồng phục bếp, phục vụ và tạp dề cho nhà hàng các quy mô.</p>
-            <div class="product-meta">
-              <span class="product-category-tag">Dịch vụ</span>
-              <a href="#contact" class="product-link" data-service="restaurant">Đặt hàng<span class="sr-only"> Đồng Phục Nhà Hàng</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <span class="product-category-tag">Văn phòng</span>
+              <a href="#contact" class="product-link" data-service="office-other">Đặt hàng<span class="sr-only"> Đồng Phục Văn Phòng</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
       </div>
+
+      <p class="other-sectors">
+        Chúng tôi cũng nhận may đồng phục <strong>nhà trẻ, trường học, nhà hàng và spa</strong>.
+        Các mẫu này chưa có ảnh trên website — <a href="#contact">liên hệ để xem mẫu và nhận báo giá</a>.
+      </p>
     </div>
   </section>
 
@@ -452,31 +474,39 @@
     <div class="container">
       <div class="section-header center reveal">
         <span class="section-tag">Hình ảnh</span>
-        <h2>Các dòng sản phẩm</h2>
-        <p class="section-subtitle">Hình ảnh minh hoạ cho từng nhóm đồng phục chúng tôi nhận may.</p>
+        <h2>Một số mẫu khác</h2>
+        <p class="section-subtitle">Các mẫu khác trong danh mục của chúng tôi.</p>
       </div>
       <div class="gallery-grid">
         <figure class="gallery-item reveal">
-          <div class="media"><img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&h=600&fit=crop&q=80" alt="Nhóm nhân viên y tế mặc đồng phục" width="800" height="600" loading="lazy" decoding="async" class="gallery-photo"></div>
-          <figcaption><strong>Nhóm y tế</strong>Đồng phục bệnh viện &amp; phòng khám</figcaption>
+          <div class="media"><picture>
+            <source srcset="images/g-blouse-mo.webp" type="image/webp">
+            <img src="images/g-blouse-mo.jpg" alt="Áo blouse dáng dài mặc mở, bên trong là sơ mi và cà vạt" width="700" height="933" loading="lazy" decoding="async" class="gallery-photo">
+          </picture></div>
+          <figcaption>Blouse dáng dài</figcaption>
         </figure>
         <figure class="gallery-item reveal d1">
-          <div class="media"><img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=600&h=450&fit=crop&q=80" alt="Trang phục phòng mổ" width="600" height="450" loading="lazy" decoding="async" class="gallery-photo"></div>
-          <figcaption><strong>Phòng mổ</strong>Bộ scrubs phẫu thuật</figcaption>
+          <div class="media"><picture>
+            <source srcset="images/g-dieuduong-dai.webp" type="image/webp">
+            <img src="images/g-dieuduong-dai.jpg" alt="Bộ điều dưỡng trắng viền xanh tay dài" width="700" height="933" loading="lazy" decoding="async" class="gallery-photo">
+          </picture></div>
+          <figcaption>Điều dưỡng tay dài</figcaption>
         </figure>
         <figure class="gallery-item reveal d2">
-          <div class="media"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=450&fit=crop&q=80" alt="Học sinh mặc đồng phục" width="600" height="450" loading="lazy" decoding="async" class="gallery-photo"></div>
-          <figcaption><strong>Trường học</strong>Đồng phục cho mọi cấp</figcaption>
+          <div class="media"><picture>
+            <source srcset="images/g-vest-peplum.webp" type="image/webp">
+            <img src="images/g-vest-peplum.jpg" alt="Vest nữ peplum màu đen kèm chân váy" width="700" height="933" loading="lazy" decoding="async" class="gallery-photo">
+          </picture></div>
+          <figcaption>Vest nữ peplum</figcaption>
         </figure>
-        <figure class="gallery-item reveal">
-          <div class="media"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=450&fit=crop&q=80" alt="Nhân viên spa mặc đồng phục" width="600" height="450" loading="lazy" decoding="async" class="gallery-photo"></div>
-          <figcaption><strong>Spa &amp; thẩm mỹ</strong>Thanh lịch &amp; gọn gàng</figcaption>
+        <figure class="gallery-item reveal d3">
+          <div class="media"><picture>
+            <source srcset="images/g-vest-pose.webp" type="image/webp">
+            <img src="images/g-vest-pose.jpg" alt="Vest nữ peplum dáng ôm" width="700" height="933" loading="lazy" decoding="async" class="gallery-photo">
+          </picture></div>
+          <figcaption>Vest nữ dáng ôm</figcaption>
         </figure>
       </div>
-      <p class="gallery-note">
-        Hình ảnh trên mang tính minh hoạ cho từng nhóm sản phẩm, không phải ảnh chụp đơn hàng đã thực hiện.
-        Chúng tôi sẽ thay bằng ảnh thật của xưởng khi có.
-      </p>
     </div>
   </section>
 
@@ -625,11 +655,14 @@
                   <option value="pharmacy">Đồng phục Dược sĩ</option>
                   <option value="medical-other">Đồng phục Y tế khác</option>
                 </optgroup>
-                <optgroup label="Giáo dục">
+                <optgroup label="Văn phòng &amp; lễ tân">
+                  <option value="reception">Đồng phục Lễ tân</option>
+                  <option value="office-vest">Vest nữ công sở</option>
+                  <option value="office-other">Đồng phục Văn phòng khác</option>
+                </optgroup>
+                <optgroup label="Ngành khác">
                   <option value="kindergarten">Đồng phục Nhà trẻ</option>
                   <option value="school">Đồng phục Trường học</option>
-                </optgroup>
-                <optgroup label="Dịch vụ">
                   <option value="spa">Đồng phục Thẩm mỹ viện</option>
                   <option value="hotel">Đồng phục Khách sạn</option>
                   <option value="restaurant">Đồng phục Nhà hàng</option>
@@ -717,7 +750,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Đồng Phục Y Tế Quỳnh Châu. Hình ảnh trên website mang tính minh hoạ.</p>
+      <p>&copy; 2026 Đồng Phục Y Tế Quỳnh Châu.</p>
     </div>
   </div>
 </footer>
