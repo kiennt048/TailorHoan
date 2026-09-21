@@ -47,12 +47,10 @@ là chưa gửi được và mời gọi / nhắn Zalo.
 3. Gửi thử một yêu cầu và kiểm tra hộp thư.
 4. **Kiểm tra lại mỗi tháng** — nếu email hỏng, lead sẽ mất mà không ai biết.
 
-## 3. Ảnh thật ✅ ĐÃ XONG (phần lớn)
-Đã nhận 18 ảnh studio của tiệm và đưa lên toàn bộ 16 vị trí ảnh. Ảnh kho Unsplash
-đã bị gỡ hết, dòng "hình ảnh mang tính minh hoạ" cũng đã xoá.
-
-Còn thiếu: ảnh 4 ngành chưa có (nhà trẻ, trường học, nhà hàng, spa) và **ảnh xưởng
-đang làm việc** — xem `IMAGE-SHOTLIST.md`.
+## 3. Ảnh thật ✅ ĐÃ XONG
+24 ảnh đã lên website: 18 ảnh studio + 4 ảnh xưởng thật + 4 ảnh AI minh hoạ (có nhãn).
+Không còn ảnh kho Unsplash. Còn thiếu một ảnh cô Hoan làm việc tại xưởng —
+xem `IMAGE-SHOTLIST.md`.
 
 ## 4. Bảng chất liệu — mục "Chất liệu"
 Bảng cũ toàn ô **"Đang cập nhật"** đã bị bỏ — một bảng trống một nửa trông như
