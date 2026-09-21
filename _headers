@@ -4,6 +4,14 @@
   X-Frame-Options: SAMEORIGIN
   Permissions-Policy: geolocation=(), microphone=(), camera=()
 
+# HTML must revalidate, otherwise a cached page keeps pointing at old asset URLs.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+/en.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
   Access-Control-Allow-Origin: *
@@ -11,8 +19,15 @@
 /images/*
   Cache-Control: public, max-age=2592000
 
+# style.css and main.js are requested with ?v=<date>, so a long cache is safe:
+# bumping the version in both HTML files is what invalidates them.
 /css/*
-  Cache-Control: public, max-age=604800
-
+  Cache-Control: public, max-age=31536000
 /js/*
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=31536000
+
+# site-config.js carries the phone, Zalo, email and form key, and is edited by
+# hand without bumping any version. Keep it nearly uncached so corrections to
+# contact details reach returning visitors in minutes, not days.
+/js/site-config.js
+  Cache-Control: public, max-age=60, must-revalidate
