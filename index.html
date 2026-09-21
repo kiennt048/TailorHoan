@@ -103,6 +103,7 @@
       <li><a href="#about" class="nav-link">Giới thiệu</a></li>
       <li><a href="#products" class="nav-link">Sản phẩm</a></li>
       <li><a href="#materials" class="nav-link">Chất liệu</a></li>
+      <li><a href="#workshop" class="nav-link">Trong xưởng</a></li>
       <li><a href="#process" class="nav-link">Quy trình</a></li>
       <li><a href="#contact" class="nav-link">Liên hệ</a></li>
     </ul>
@@ -223,13 +224,15 @@
       <div class="section-header center reveal">
         <span class="section-tag">Sản phẩm</span>
         <h2>Đồng phục y tế và các ngành khác</h2>
-        <p class="section-subtitle">Trọng tâm của chúng tôi là đồng phục y tế. Ngoài ra còn nhận đồng phục lễ tân và văn phòng.</p>
+        <p class="section-subtitle">Trọng tâm của chúng tôi là đồng phục y tế. Ngoài ra còn nhận đồng phục lễ tân, văn phòng, trường học và nhà hàng.</p>
       </div>
 
       <div class="product-filter" role="group" aria-label="Lọc sản phẩm theo ngành">
         <button class="filter-btn" data-filter="all" aria-pressed="true">Tất cả</button>
         <button class="filter-btn" data-filter="medical" aria-pressed="false">Y tế</button>
         <button class="filter-btn" data-filter="office" aria-pressed="false">Văn phòng &amp; lễ tân</button>
+        <button class="filter-btn" data-filter="education" aria-pressed="false">Giáo dục</button>
+        <button class="filter-btn" data-filter="hospitality" aria-pressed="false">Dịch vụ</button>
       </div>
       <p id="productCount" class="sr-only" role="status" aria-live="polite"></p>
 
@@ -383,12 +386,67 @@
             </div>
           </div>
         </article>
-      </div>
 
-      <p class="other-sectors">
-        Chúng tôi cũng nhận may đồng phục <strong>nhà trẻ, trường học, nhà hàng và spa</strong>.
-        Các mẫu này chưa có ảnh trên website — <a href="#contact">liên hệ để xem mẫu và nhận báo giá</a>.
-      </p>
+        <article class="product-card reveal" data-category="education">
+          <div class="media"><picture>
+            <source srcset="images/p-nhatre.webp" type="image/webp">
+            <img src="images/p-nhatre.jpg" alt="Hai bé mặc đồng phục nhà trẻ áo vàng và yếm xanh than" width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture><span class="badge-illus">Ảnh minh hoạ</span></div>
+          <div class="product-info">
+            <h3 class="product-name">Đồng Phục Nhà Trẻ</h3>
+            <p class="product-desc">Áo polo cổ bẻ và yếm/quần short, vải cotton mềm cho bé mẫu giáo.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Giáo dục</span>
+              <a href="#contact" class="product-link" data-service="kindergarten">Đặt hàng<span class="sr-only"> Đồng Phục Nhà Trẻ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal d1" data-category="education">
+          <div class="media"><picture>
+            <source srcset="images/p-hocsinh.webp" type="image/webp">
+            <img src="images/p-hocsinh.jpg" alt="Hai học sinh mặc đồng phục sơ mi trắng và cà vạt xanh than" width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture><span class="badge-illus">Ảnh minh hoạ</span></div>
+          <div class="product-info">
+            <h3 class="product-name">Đồng Phục Học Sinh</h3>
+            <p class="product-desc">Sơ mi trắng ngắn tay, cà vạt, chân váy xếp ly hoặc quần âu xanh than.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Giáo dục</span>
+              <a href="#contact" class="product-link" data-service="school">Đặt hàng<span class="sr-only"> Đồng Phục Học Sinh</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal d2" data-category="hospitality">
+          <div class="media"><picture>
+            <source srcset="images/p-nhahang.webp" type="image/webp">
+            <img src="images/p-nhahang.jpg" alt="Đầu bếp mặc áo bếp trắng và nhân viên phục vụ mặc sơ mi đen, cùng tạp dề xám" width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture><span class="badge-illus">Ảnh minh hoạ</span></div>
+          <div class="product-info">
+            <h3 class="product-name">Đồng Phục Nhà Hàng</h3>
+            <p class="product-desc">Áo bếp hai hàng cúc, tạp dề ngang và sơ mi phục vụ.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Dịch vụ</span>
+              <a href="#contact" class="product-link" data-service="restaurant">Đặt hàng<span class="sr-only"> Đồng Phục Nhà Hàng</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="hospitality">
+          <div class="media"><picture>
+            <source srcset="images/p-spa.webp" type="image/webp">
+            <img src="images/p-spa.jpg" alt="Nhân viên spa mặc bộ tunic màu xanh sage" width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture><span class="badge-illus">Ảnh minh hoạ</span></div>
+          <div class="product-info">
+            <h3 class="product-name">Đồng Phục Thẩm Mỹ Viện</h3>
+            <p class="product-desc">Áo tunic vạt chéo cổ trụ màu xanh sage, tay lỡ, dáng thanh lịch.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Dịch vụ</span>
+              <a href="#contact" class="product-link" data-service="spa">Đặt hàng<span class="sr-only"> Đồng Phục Thẩm Mỹ Viện</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -441,8 +499,49 @@
     </div>
   </section>
 
+  <!-- Workshop -->
+  <section id="workshop" class="section section-alt" tabindex="-1">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="section-tag">Trong xưởng</span>
+        <h2>Chúng tôi tự may, không đặt lại</h2>
+        <p class="section-subtitle">Ảnh chụp tại xưởng của chúng tôi.</p>
+      </div>
+      <div class="workshop-grid">
+        <figure class="workshop-item reveal">
+          <div class="media"><picture>
+            <source srcset="images/xuong-toancanh.webp" type="image/webp">
+            <img src="images/xuong-toancanh.jpg" alt="Dây chuyền may tại xưởng với nhiều máy may công nghiệp" width="900" height="675" loading="lazy" decoding="async" class="workshop-photo">
+          </picture></div>
+          <figcaption>Dây chuyền may</figcaption>
+        </figure>
+        <figure class="workshop-item reveal d1">
+          <div class="media"><picture>
+            <source srcset="images/xuong-theu-logo.webp" type="image/webp">
+            <img src="images/xuong-theu-logo.jpg" alt="Máy thêu công nghiệp đang thêu logo bệnh viện lên áo blouse trắng" width="900" height="675" loading="lazy" decoding="async" class="workshop-photo">
+          </picture></div>
+          <figcaption>Thêu logo lên áo</figcaption>
+        </figure>
+        <figure class="workshop-item reveal d2">
+          <div class="media"><picture>
+            <source srcset="images/xuong-duong-may.webp" type="image/webp">
+            <img src="images/xuong-duong-may.jpg" alt="Cận cảnh đường may trên vải xanh navy tại máy may công nghiệp" width="900" height="675" loading="lazy" decoding="async" class="workshop-photo">
+          </picture></div>
+          <figcaption>Đường may</figcaption>
+        </figure>
+        <figure class="workshop-item reveal d3">
+          <div class="media"><picture>
+            <source srcset="images/xuong-ke-vai.webp" type="image/webp">
+            <img src="images/xuong-ke-vai.jpg" alt="Kệ vải nhiều màu tại kho vải của xưởng" width="900" height="675" loading="lazy" decoding="async" class="workshop-photo">
+          </picture></div>
+          <figcaption>Kho vải</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- Process -->
-  <section id="process" class="section section-alt" tabindex="-1">
+  <section id="process" class="section" tabindex="-1">
     <div class="container">
       <div class="section-header center reveal">
         <span class="section-tag">Quy trình</span>
@@ -735,6 +834,7 @@
         <ul>
           <li><a href="#about">Về chúng tôi</a></li>
           <li><a href="#materials">Chất liệu</a></li>
+          <li><a href="#workshop">Trong xưởng</a></li>
           <li><a href="#process">Quy trình đặt hàng</a></li>
           <li><a href="#commitments">Cam kết dịch vụ</a></li>
           <li><a href="#contact">Liên hệ</a></li>

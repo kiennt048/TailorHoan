@@ -103,6 +103,7 @@
       <li><a href="#about" class="nav-link">About</a></li>
       <li><a href="#products" class="nav-link">Products</a></li>
       <li><a href="#materials" class="nav-link">Fabrics</a></li>
+      <li><a href="#workshop" class="nav-link">Workshop</a></li>
       <li><a href="#process" class="nav-link">Process</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
@@ -223,13 +224,15 @@
       <div class="section-header center reveal">
         <span class="section-tag">Products</span>
         <h2>Medical uniforms and other sectors</h2>
-        <p class="section-subtitle">Medical uniforms are our focus. We also make reception and office uniforms.</p>
+        <p class="section-subtitle">Medical uniforms are our focus. We also make reception, office, school and restaurant uniforms.</p>
       </div>
 
       <div class="product-filter" role="group" aria-label="Filter products by sector">
         <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
         <button class="filter-btn" data-filter="medical" aria-pressed="false">Healthcare</button>
         <button class="filter-btn" data-filter="office" aria-pressed="false">Office &amp; reception</button>
+        <button class="filter-btn" data-filter="education" aria-pressed="false">Education</button>
+        <button class="filter-btn" data-filter="hospitality" aria-pressed="false">Hospitality</button>
       </div>
       <p id="productCount" class="sr-only" role="status" aria-live="polite"></p>
 
@@ -383,12 +386,67 @@
             </div>
           </div>
         </article>
-      </div>
 
-      <p class="other-sectors">
-        We also make uniforms for <strong>nurseries, schools, restaurants and spas</strong>.
-        We have no photographs of those yet — <a href="#contact">contact us to see samples and get a quote</a>.
-      </p>
+        <article class="product-card reveal" data-category="education">
+          <div class="media"><picture>
+            <source srcset="images/p-nhatre.webp" type="image/webp">
+            <img src="images/p-nhatre.jpg" alt="Two small children in a nursery uniform, yellow polo with navy pinafore and shorts" width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture><span class="badge-illus">Illustration</span></div>
+          <div class="product-info">
+            <h3 class="product-name">Nursery Uniform</h3>
+            <p class="product-desc">A collared polo with pinafore or shorts, in soft cotton for preschoolers.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Education</span>
+              <a href="#contact" class="product-link" data-service="kindergarten">Order<span class="sr-only"> Nursery Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal d1" data-category="education">
+          <div class="media"><picture>
+            <source srcset="images/p-hocsinh.webp" type="image/webp">
+            <img src="images/p-hocsinh.jpg" alt="Two secondary school students in white shirts with navy ties" width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture><span class="badge-illus">Illustration</span></div>
+          <div class="product-info">
+            <h3 class="product-name">School Uniform</h3>
+            <p class="product-desc">A short-sleeved white shirt and tie with a navy pleated skirt or trousers.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Education</span>
+              <a href="#contact" class="product-link" data-service="school">Order<span class="sr-only"> School Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal d2" data-category="hospitality">
+          <div class="media"><picture>
+            <source srcset="images/p-nhahang.webp" type="image/webp">
+            <img src="images/p-nhahang.jpg" alt="A chef in a white jacket and a server in a black shirt, both in grey aprons" width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture><span class="badge-illus">Illustration</span></div>
+          <div class="product-info">
+            <h3 class="product-name">Restaurant Uniform</h3>
+            <p class="product-desc">A double-breasted chef jacket, waist apron and service shirt.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Hospitality</span>
+              <a href="#contact" class="product-link" data-service="restaurant">Order<span class="sr-only"> Restaurant Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="hospitality">
+          <div class="media"><picture>
+            <source srcset="images/p-spa.webp" type="image/webp">
+            <img src="images/p-spa.jpg" alt="A spa therapist in a sage green tunic set" width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture><span class="badge-illus">Illustration</span></div>
+          <div class="product-info">
+            <h3 class="product-name">Beauty Salon Uniform</h3>
+            <p class="product-desc">An elegant sage green wrap tunic with mandarin collar and cropped sleeves.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Hospitality</span>
+              <a href="#contact" class="product-link" data-service="spa">Order<span class="sr-only"> Beauty Salon Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -442,8 +500,49 @@
     </div>
   </section>
 
+  <!-- Workshop -->
+  <section id="workshop" class="section section-alt" tabindex="-1">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="section-tag">Inside the workshop</span>
+        <h2>We sew it ourselves</h2>
+        <p class="section-subtitle">Photographs taken in our own workshop.</p>
+      </div>
+      <div class="workshop-grid">
+        <figure class="workshop-item reveal">
+          <div class="media"><picture>
+            <source srcset="images/xuong-toancanh.webp" type="image/webp">
+            <img src="images/xuong-toancanh.jpg" alt="The sewing line at our workshop, with rows of industrial machines" width="900" height="675" loading="lazy" decoding="async" class="workshop-photo">
+          </picture></div>
+          <figcaption>The sewing line</figcaption>
+        </figure>
+        <figure class="workshop-item reveal d1">
+          <div class="media"><picture>
+            <source srcset="images/xuong-theu-logo.webp" type="image/webp">
+            <img src="images/xuong-theu-logo.jpg" alt="An industrial embroidery machine stitching a hospital logo onto a white coat" width="900" height="675" loading="lazy" decoding="async" class="workshop-photo">
+          </picture></div>
+          <figcaption>Logo embroidery</figcaption>
+        </figure>
+        <figure class="workshop-item reveal d2">
+          <div class="media"><picture>
+            <source srcset="images/xuong-duong-may.webp" type="image/webp">
+            <img src="images/xuong-duong-may.jpg" alt="A close-up of stitching on navy fabric at an industrial machine" width="900" height="675" loading="lazy" decoding="async" class="workshop-photo">
+          </picture></div>
+          <figcaption>Stitching, close up</figcaption>
+        </figure>
+        <figure class="workshop-item reveal d3">
+          <div class="media"><picture>
+            <source srcset="images/xuong-ke-vai.webp" type="image/webp">
+            <img src="images/xuong-ke-vai.jpg" alt="Shelves of fabric rolls in many colours at the workshop store" width="900" height="675" loading="lazy" decoding="async" class="workshop-photo">
+          </picture></div>
+          <figcaption>The fabric store</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- Process -->
-  <section id="process" class="section section-alt" tabindex="-1">
+  <section id="process" class="section" tabindex="-1">
     <div class="container">
       <div class="section-header center reveal">
         <span class="section-tag">Process</span>
@@ -736,6 +835,7 @@
         <ul>
           <li><a href="#about">About us</a></li>
           <li><a href="#materials">Fabrics</a></li>
+          <li><a href="#workshop">Inside the workshop</a></li>
           <li><a href="#process">How to order</a></li>
           <li><a href="#commitments">Our commitments</a></li>
           <li><a href="#contact">Contact</a></li>

@@ -376,6 +376,19 @@ section[tabindex="-1"]:focus{outline:none}
 .spec-empty{color:var(--text-muted);font-style:italic}
 .spec-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 
+/* ── Workshop (real photographs of the premises) ─────────────────────── */
+.workshop-grid{display:grid;grid-template-columns:1fr;gap:var(--gap)}
+@media (min-width:720px){.workshop-grid{grid-template-columns:1fr 1fr}}
+.workshop-item{margin:0}
+.workshop-item .media{aspect-ratio:4/3}
+.workshop-item figcaption{margin-top:var(--s3);font-size:var(--fs-sm);font-weight:600;color:var(--text)}
+
+/* "Illustration" badge — only on cards whose photo is not of our own work */
+.badge-illus{position:absolute;left:var(--s3);top:var(--s3);z-index:1;
+  padding:3px var(--s3);border-radius:var(--radius-full);
+  font-size:var(--fs-xs);font-weight:600;letter-spacing:.01em;
+  background:rgba(11,29,33,.78);color:#fff;backdrop-filter:saturate(140%) blur(2px)}
+
 /* ── Process ───────────────────────────────────────────────────────────── */
 .process-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--gap);
   counter-reset:step;list-style:none}

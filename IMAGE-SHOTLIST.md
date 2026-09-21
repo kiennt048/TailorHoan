@@ -1,64 +1,65 @@
-# ẢNH WEBSITE — trạng thái & phần còn thiếu
+# ẢNH WEBSITE — trạng thái
 
-Cập nhật: 21/09/2026 — đã nhận và đưa lên **18 ảnh studio** của tiệm.
+Cập nhật 21/09/2026.
 
-## ✅ Đã có ảnh thật (16/16 vị trí đang hiển thị)
+## ✅ Đã lên website
 
-| Vị trí | Ảnh dùng |
-|---|---|
-| Hero đầu trang | Bác sĩ nam + nữ, blouse trắng khoác ngoài scrubs xanh |
-| Về chúng tôi | **Chân dung cô Hoan** (kèm dòng tên "Cô Hoan — Chủ tiệm may Quỳnh Châu") |
-| Sản phẩm — Y tế (6) | Blouse bác sĩ · Blouse nữ/dược sĩ · Scrubs phòng mổ · Scrubs ngắn tay · Điều dưỡng · Điều dưỡng ngắn tay |
-| Sản phẩm — Văn phòng (4) | Lễ tân nam · Lễ tân nữ · Vest nữ công sở · Đồng phục văn phòng |
-| Mẫu khác (4) | Blouse dáng dài · Điều dưỡng tay dài · Vest peplum · Vest dáng ôm |
-| Ảnh chia sẻ (OG) | Thẻ thương hiệu ghép ảnh hero — hiện khi dán link lên Zalo/Facebook |
-
-Tất cả đã tự host trong `images/`, xuất **WebP + JPG dự phòng**, cắt đúng tỉ lệ từng ô.
-Không còn ảnh kho Unsplash nào, và dòng "hình ảnh mang tính minh hoạ" đã được gỡ.
-
----
-
-## ⬜ CÒN THIẾU
-
-### A. Bốn ngành chưa có ảnh
-Hiện website ghi rõ ở cuối mục Sản phẩm: *"cũng nhận may đồng phục nhà trẻ, trường học,
-nhà hàng và spa — các mẫu này chưa có ảnh, liên hệ để xem mẫu"*. Thành thật, nhưng
-có ảnh thì bán tốt hơn nhiều.
-
-| Ngành | Tỉ lệ | Tối thiểu |
+| Nhóm | Ảnh | Nguồn |
 |---|---|---|
-| Đồng phục nhà trẻ | 5:6 dọc | 1000 × 1200 |
-| Đồng phục học sinh | 5:6 dọc | 1000 × 1200 |
-| Đồng phục nhà hàng / bếp | 5:6 dọc | 1000 × 1200 |
-| Đồng phục spa / thẩm mỹ viện | 5:6 dọc | 1000 × 1200 |
+| Hero, Về chúng tôi (chân dung cô Hoan), 10 card sản phẩm y tế + văn phòng, 4 mẫu khác | 16 | Ảnh studio thật của tiệm |
+| **Trong xưởng** — dây chuyền may · thêu logo · đường may · kho vải | 4 | **Ảnh thật chụp tại xưởng** |
+| 4 card: nhà trẻ · học sinh · nhà hàng · spa | 4 | Ảnh AI, có nhãn **"Ảnh minh hoạ"** trên từng card |
 
-> **Nếu tiệm không thực sự nhận mấy đơn này**, nói tôi biết để bỏ hẳn đoạn đó —
-> quảng cáo dịch vụ không làm còn tệ hơn là không nhắc tới.
+Tổng 24 ảnh, tự host, WebP + JPG dự phòng, **756 KB** cho toàn bộ.
 
-### B. Ảnh xưởng đang làm việc (giá trị cao nhất còn lại)
-18 ảnh hiện có đều là ảnh studio chụp người mẫu mặc thành phẩm — rất đẹp, nhưng
-**không có ảnh nào chứng minh tiệm tự may**. Với khách bệnh viện, đây mới là thứ
-phân biệt "xưởng may" với "chỗ bán lại".
-
-| # | Nội dung | Tỉ lệ | Tối thiểu |
-|---|---|---|---|
-| 1 | Toàn cảnh xưởng đang làm việc | 4:3 ngang | 1600 × 1200 |
-| 2 | Cận cảnh đường may / mũi chỉ | 4:3 ngang | 1200 × 900 |
-| 3 | Cận cảnh thêu logo lên áo | 4:3 ngang | 1200 × 900 |
-| 4 | Kệ vải / các cuộn vải nhiều màu | 4:3 ngang | 1200 × 900 |
-| 5 | Cô Hoan đang làm việc tại xưởng | 4:5 dọc | 1200 × 1500 |
-
-Có nhóm này tôi sẽ thêm một mục "Trong xưởng" và đưa ảnh #5 vào mục Về chúng tôi
-làm ảnh phụ bên cạnh chân dung.
-
-### C. Bảng thông số vải
-Xem mục 4 trong `CONTENT-TODO.md`. Cần chứng từ nhà cung cấp, không phải ảnh.
+Mục "Trong xưởng" là phần bổ sung quan trọng nhất: trước đó không ảnh nào chứng
+minh tiệm tự may. Nay tiêu đề mục ghi thẳng **"Chúng tôi tự may, không đặt lại"**
+và có ảnh chứng minh.
 
 ---
+
+## ⚠️ Một ảnh KHÔNG được dùng
+
+**Ảnh cô Hoan đứng cạnh thợ may trong xưởng** — tôi để lại, không đưa lên. Đây là
+ảnh AI, không phải ảnh chụp:
+
+- Kích thước **1345×2000**, trùng bộ ảnh AI (1342×2000). Bốn ảnh xưởng thật đều là
+  **2000×1493** — cùng một máy ảnh thì phải cùng kích thước.
+- Phóng to bàn tay thợ may: **bàn tay trái chỉ có 4 ngón**, ngón cái dính vào vải.
+  Cẳng tay phải dài bất thường. Đây là lỗi AI điển hình.
+
+Lý do không dùng, theo thứ tự quan trọng:
+
+1. **Lỗi bàn tay nhìn thấy được.** Khách xem kỹ sẽ phát hiện. Một ảnh "bằng chứng
+   xưởng" bị lộ là giả gây thiệt hại uy tín lớn hơn nhiều so với việc không có ảnh đó.
+2. **Không cần nữa.** Đã có 4 ảnh xưởng thật, và chúng mạnh hơn.
+3. Ảnh mô tả một **người có thật, có tên và chân dung trên website**, đang làm một
+   việc cụ thể, dùng làm bằng chứng vận hành.
+
+**Thay thế:** chụp cô Hoan tại xưởng bằng điện thoại, 2 phút. Tỉ lệ 4:5 dọc, tối
+thiểu 1200×1500, chụp nghiêng, cô đang cầm vải hoặc đứng cạnh máy — không cần nhìn
+máy ảnh, không cần dàn dựng. Gửi vào chat là tôi thay ngay.
+
+---
+
+## 📌 Cần bạn xác nhận: logo Bệnh viện Chợ Rẫy
+
+Ảnh thêu logo hiển thị rõ logo **Bệnh viện Chợ Rẫy**. Đây là ảnh sản phẩm thật của
+tiệm và là bằng chứng uy tín rất mạnh — nhưng nó cũng **công khai danh tính một
+khách hàng**.
+
+Tôi giữ nguyên vì bạn chủ động gửi ảnh này. Nhưng nếu chưa hỏi ý kiến bệnh viện,
+cân nhắc: (a) xin phép, hoặc (b) nói tôi làm mờ phần chữ — vẫn thấy máy đang thêu
+logo lên áo, vẫn chứng minh năng lực, mà không nêu tên ai.
+
+---
+
+## ⬜ Còn thiếu
+
+| Nội dung | Tỉ lệ | Tối thiểu |
+|---|---|---|
+| Cô Hoan đang làm việc tại xưởng (thay ảnh AI) | 4:5 dọc | 1200 × 1500 |
+| Bảng thông số vải — cần chứng từ nhà cung cấp, không phải ảnh | — | xem `CONTENT-TODO.md` |
 
 ## Cách gửi
-Kéo thả ảnh **trực tiếp vào khung chat** (hoặc nén .zip rồi kéo vào — cách bạn vừa làm
-chạy tốt). Phiên làm việc chạy trên máy chủ đám mây nên **không đọc được thư mục
-trên máy bạn**; nhắc đường dẫn thì tôi không lấy được.
-
-Gửi ảnh gốc, đừng cắt sẵn — tôi cắt đúng tỉ lệ từng ô và nén tối ưu.
+Kéo thả vào khung chat, hoặc nén `.zip` rồi kéo vào. Gửi ảnh gốc, đừng cắt sẵn.
