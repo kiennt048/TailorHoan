@@ -15,4 +15,5 @@ node_modules
 
 # Internal docs and tooling — not part of the website
 CONTENT-TODO.md
+IMAGE-SHOTLIST.md
 tools

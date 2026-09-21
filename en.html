@@ -38,8 +38,7 @@
 
 <link rel="preload" href="fonts/bvp-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/bvp-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-<link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800&h=1000&fit=crop&q=80">
+<link rel="preload" as="image" fetchpriority="high" href="images/hero-doctors.webp" type="image/webp">
 <link rel="stylesheet" href="css/style.css">
 
 <!-- Marks JS as alive so scroll-reveal may hide sections. Without it nothing is hidden. -->
@@ -153,11 +152,10 @@
         </ul>
       </div>
       <div class="hero-figure">
-        <div class="media">
-          <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800&h=1000&fit=crop&q=80"
-               alt="A white long-sleeved lab coat with a stethoscope" width="800" height="1000"
-               fetchpriority="high" decoding="async" class="hero-photo">
-        </div>
+        <div class="media"><picture>
+            <source srcset="images/hero-doctors.webp" type="image/webp">
+            <img src="images/hero-doctors.jpg" alt="A male and female doctor in white lab coats over green scrubs" width="1000" height="1250" fetchpriority="high" decoding="async" class="hero-photo">
+          </picture></div>
       </div>
     </div>
   </section>
@@ -166,23 +164,25 @@
   <section id="about" class="section" tabindex="-1">
     <div class="container about-grid">
       <div class="reveal">
-        <div class="media">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=750&fit=crop&q=80"
-               alt="An industrial sewing machine in a garment workshop" width="600" height="750"
-               loading="lazy" decoding="async" class="about-photo">
-        </div>
+        <figure class="owner-figure">
+          <div class="media"><picture>
+            <source srcset="images/owner-hoan.webp" type="image/webp">
+            <img src="images/owner-hoan.jpg" alt="Ms Hoan, owner of Quynh Chau" width="900" height="1125" loading="lazy" decoding="async" class="about-photo">
+          </picture></div>
+          <figcaption><strong>Ms Hoan</strong>Owner, Quynh Chau</figcaption>
+        </figure>
       </div>
       <div class="reveal d1">
         <span class="section-tag">About us</span>
         <h2>Care in every stitch</h2>
         <p class="lead">
-          <strong>Quynh Chau</strong> specialises in made-to-measure medical uniforms — doctors&#39;
-          lab coats, nursing scrubs, theatre wear, technician and pharmacist uniforms.
+          <strong>Ms Hoan</strong>, who owns the workshop, follows every order herself — choosing the
+          fabric, making the pattern, cutting and sewing, through to delivery.
         </p>
         <p>
-          Beyond healthcare we also make uniforms for nurseries, schools, beauty salons, hotels
-          and restaurants. Every order is looked after from fabric selection and pattern-making
-          through cutting, sewing and finishing.
+          <strong>Quynh Chau</strong> specialises in made-to-measure medical uniforms: doctors&#39; lab
+          coats, theatre scrubs, nursing, technician and pharmacist wear. We also make reception and
+          office uniforms for hotels and businesses, along with nursery, school and restaurant uniforms.
         </p>
         <div class="about-features">
           <div class="about-feature">
@@ -223,150 +223,172 @@
       <div class="section-header center reveal">
         <span class="section-tag">Products</span>
         <h2>Medical uniforms and other sectors</h2>
-        <p class="section-subtitle">Medical uniforms are our focus. We also serve education and hospitality.</p>
+        <p class="section-subtitle">Medical uniforms are our focus. We also make reception and office uniforms.</p>
       </div>
 
       <div class="product-filter" role="group" aria-label="Filter products by sector">
         <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
         <button class="filter-btn" data-filter="medical" aria-pressed="false">Healthcare</button>
-        <button class="filter-btn" data-filter="education" aria-pressed="false">Education</button>
-        <button class="filter-btn" data-filter="hospitality" aria-pressed="false">Hospitality</button>
+        <button class="filter-btn" data-filter="office" aria-pressed="false">Office &amp; reception</button>
       </div>
       <p id="productCount" class="sr-only" role="status" aria-live="polite"></p>
 
       <div class="product-grid">
         <article class="product-card reveal" data-category="medical">
-          <div class="media"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&h=720&fit=crop&q=80" alt="A white long-sleeved lab coat" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+          <div class="media"><picture>
+            <source srcset="images/p-blouse-bacsi.webp" type="image/webp">
+            <img src="images/p-blouse-bacsi.jpg" alt="A long white coat with notched lapel and two lower pockets, cut to measure." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
             <h3 class="product-name">Doctor Lab Coat</h3>
-            <p class="product-desc">A classic white long-sleeved lab coat, cut to measure for doctors and pharmacists.</p>
+            <p class="product-desc">A long white coat with notched lapel and two lower pockets, cut to measure.</p>
             <div class="product-meta">
               <span class="product-category-tag">Healthcare</span>
-              <a href="#contact" class="product-link" data-service="doctor">Order<span class="sr-only"> a Doctor Lab Coat</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#contact" class="product-link" data-service="doctor">Order<span class="sr-only"> Doctor Lab Coat</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
         <article class="product-card reveal d1" data-category="medical">
-          <div class="media"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=720&fit=crop&q=80" alt="A set of nursing scrubs" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+          <div class="media"><picture>
+            <source srcset="images/p-blouse-nu.webp" type="image/webp">
+            <img src="images/p-blouse-nu.jpg" alt="A lightly fitted long-sleeved coat for clinics and pharmacies." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Nursing Scrubs</h3>
-            <p class="product-desc">A top-and-trouser scrub set in a range of colours, cut loose for long shifts.</p>
+            <h3 class="product-name">Women&#39;s Lab Coat</h3>
+            <p class="product-desc">A lightly fitted long-sleeved coat for clinics and pharmacies.</p>
             <div class="product-meta">
               <span class="product-category-tag">Healthcare</span>
-              <a href="#contact" class="product-link" data-service="nurse">Order<span class="sr-only"> Nursing Scrubs</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#contact" class="product-link" data-service="pharmacy">Order<span class="sr-only"> Women&#39;s Lab Coat</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
         <article class="product-card reveal d2" data-category="medical">
-          <div class="media"><img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=600&h=720&fit=crop&q=80" alt="Green operating-theatre garments" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+          <div class="media"><picture>
+            <source srcset="images/p-scrubs-phongmo.webp" type="image/webp">
+            <img src="images/p-scrubs-phongmo.jpg" alt="A green V-neck scrub set, separate top and trousers, cut loose to move in." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Operating Theatre Uniform</h3>
-            <p class="product-desc">A theatre set of top, trousers and cap, made to each hospital&#39;s own specification.</p>
+            <h3 class="product-name">Theatre Scrub Set</h3>
+            <p class="product-desc">A green V-neck scrub set, separate top and trousers, cut loose to move in.</p>
             <div class="product-meta">
               <span class="product-category-tag">Healthcare</span>
-              <a href="#contact" class="product-link" data-service="surgical">Order<span class="sr-only"> an Operating Theatre Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#contact" class="product-link" data-service="surgical">Order<span class="sr-only"> Theatre Scrub Set</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
         <article class="product-card reveal" data-category="medical">
-          <div class="media"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=720&fit=crop&q=80" alt="A nursing uniform" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+          <div class="media"><picture>
+            <source srcset="images/p-scrubs-nganhtay.webp" type="image/webp">
+            <img src="images/p-scrubs-nganhtay.jpg" alt="Short-sleeve scrubs with hip pockets, comfortable across a long shift." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Nursing Uniform</h3>
-            <p class="product-desc">A nursing uniform that moves easily, with pockets placed for long shifts.</p>
+            <h3 class="product-name">Short-Sleeve Scrubs</h3>
+            <p class="product-desc">Short-sleeve scrubs with hip pockets, comfortable across a long shift.</p>
             <div class="product-meta">
               <span class="product-category-tag">Healthcare</span>
-              <a href="#contact" class="product-link" data-service="nursing">Order<span class="sr-only"> a Nursing Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#contact" class="product-link" data-service="nurse">Order<span class="sr-only"> Short-Sleeve Scrubs</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
         <article class="product-card reveal d1" data-category="medical">
-          <div class="media"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&h=720&fit=crop&q=80" alt="Surgical assistant and midwifery garments" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+          <div class="media"><picture>
+            <source srcset="images/p-dieuduong.webp" type="image/webp">
+            <img src="images/p-dieuduong.jpg" alt="A white tunic and trousers with blue piping, in the classic nursing cut." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Surgical Assistant Uniform</h3>
-            <p class="product-desc">Uniforms for surgical assistants, midwives and theatre technicians.</p>
+            <h3 class="product-name">Nursing Uniform</h3>
+            <p class="product-desc">A white tunic and trousers with blue piping, in the classic nursing cut.</p>
             <div class="product-meta">
               <span class="product-category-tag">Healthcare</span>
-              <a href="#contact" class="product-link" data-service="surgical">Order<span class="sr-only"> a Surgical Assistant Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#contact" class="product-link" data-service="nursing">Order<span class="sr-only"> Nursing Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
         <article class="product-card reveal d2" data-category="medical">
-          <div class="media"><img src="https://images.unsplash.com/photo-1582719471384-894fbb16f461?w=600&h=720&fit=crop&q=80" alt="A laboratory technician wearing a lab coat" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+          <div class="media"><picture>
+            <source srcset="images/p-dieuduong-ngan.webp" type="image/webp">
+            <img src="images/p-dieuduong-ngan.jpg" alt="A short-sleeve piped tunic with several pockets, easy to launder." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Technician Uniform</h3>
-            <p class="product-desc">Lab coats and uniforms for laboratory, imaging and pharmacy staff.</p>
+            <h3 class="product-name">Short-Sleeve Nursing</h3>
+            <p class="product-desc">A short-sleeve piped tunic with several pockets, easy to launder.</p>
             <div class="product-meta">
               <span class="product-category-tag">Healthcare</span>
-              <a href="#contact" class="product-link" data-service="technician">Order<span class="sr-only"> a Technician Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#contact" class="product-link" data-service="nursing">Order<span class="sr-only"> Short-Sleeve Nursing</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
-        <article class="product-card reveal" data-category="education">
-          <div class="media"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=720&fit=crop&q=80" alt="Young children in nursery uniforms" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+        <article class="product-card reveal" data-category="office">
+          <div class="media"><picture>
+            <source srcset="images/p-letan-nam.webp" type="image/webp">
+            <img src="images/p-letan-nam.jpg" alt="White shirt, tie and tailored trousers for reception and office staff." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Nursery Uniform</h3>
-            <p class="product-desc">Soft-fabric uniforms for small children, in the colours your school chooses.</p>
+            <h3 class="product-name">Men&#39;s Reception Uniform</h3>
+            <p class="product-desc">White shirt, tie and tailored trousers for reception and office staff.</p>
             <div class="product-meta">
-              <span class="product-category-tag">Education</span>
-              <a href="#contact" class="product-link" data-service="kindergarten">Order<span class="sr-only"> a Nursery Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <span class="product-category-tag">Office</span>
+              <a href="#contact" class="product-link" data-service="reception">Order<span class="sr-only"> Men&#39;s Reception Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
-        <article class="product-card reveal d1" data-category="education">
-          <div class="media"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=720&fit=crop&q=80" alt="Pupils in school uniform" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+        <article class="product-card reveal d1" data-category="office">
+          <div class="media"><picture>
+            <source srcset="images/p-letan-nu.webp" type="image/webp">
+            <img src="images/p-letan-nu.jpg" alt="A long-sleeved white shirt with a pencil skirt, neatly cut." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">School Uniform</h3>
-            <p class="product-desc">Hard-wearing, easy-care school uniforms made to each school&#39;s own design.</p>
+            <h3 class="product-name">Women&#39;s Reception Uniform</h3>
+            <p class="product-desc">A long-sleeved white shirt with a pencil skirt, neatly cut.</p>
             <div class="product-meta">
-              <span class="product-category-tag">Education</span>
-              <a href="#contact" class="product-link" data-service="school">Order<span class="sr-only"> a School Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <span class="product-category-tag">Office</span>
+              <a href="#contact" class="product-link" data-service="reception">Order<span class="sr-only"> Women&#39;s Reception Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
-        <article class="product-card reveal d2" data-category="hospitality">
-          <div class="media"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=720&fit=crop&q=80" alt="A spa therapist wearing a tunic" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+        <article class="product-card reveal d2" data-category="office">
+          <div class="media"><picture>
+            <source srcset="images/p-vest-nu.webp" type="image/webp">
+            <img src="images/p-vest-nu.jpg" alt="A short-sleeved peplum jacket with covered buttons and a defined waist." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Beauty Salon Uniform</h3>
-            <p class="product-desc">An elegant, modern tunic for spas and beauty salons.</p>
+            <h3 class="product-name">Women&#39;s Office Jacket</h3>
+            <p class="product-desc">A short-sleeved peplum jacket with covered buttons and a defined waist.</p>
             <div class="product-meta">
-              <span class="product-category-tag">Hospitality</span>
-              <a href="#contact" class="product-link" data-service="spa">Order<span class="sr-only"> a Beauty Salon Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <span class="product-category-tag">Office</span>
+              <a href="#contact" class="product-link" data-service="office-vest">Order<span class="sr-only"> Women&#39;s Office Jacket</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
 
-        <article class="product-card reveal" data-category="hospitality">
-          <div class="media"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=720&fit=crop&q=80" alt="A hotel reception area" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
+        <article class="product-card reveal" data-category="office">
+          <div class="media"><picture>
+            <source srcset="images/p-vanphong-doi.webp" type="image/webp">
+            <img src="images/p-vanphong-doi.jpg" alt="A matched set for men and women across the same organisation." width="700" height="840" loading="lazy" decoding="async" class="product-photo">
+          </picture></div>
           <div class="product-info">
-            <h3 class="product-name">Hotel Uniform</h3>
-            <p class="product-desc">Waistcoats, shirts and trousers for reception, housekeeping and management.</p>
+            <h3 class="product-name">Office Uniform</h3>
+            <p class="product-desc">A matched set for men and women across the same organisation.</p>
             <div class="product-meta">
-              <span class="product-category-tag">Hospitality</span>
-              <a href="#contact" class="product-link" data-service="hotel">Order<span class="sr-only"> a Hotel Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card reveal d1" data-category="hospitality">
-          <div class="media"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&h=720&fit=crop&q=80" alt="A chef in kitchen whites" width="600" height="720" loading="lazy" decoding="async" class="product-photo"></div>
-          <div class="product-info">
-            <h3 class="product-name">Restaurant Uniform</h3>
-            <p class="product-desc">Kitchen whites, service wear and aprons for restaurants of any size.</p>
-            <div class="product-meta">
-              <span class="product-category-tag">Hospitality</span>
-              <a href="#contact" class="product-link" data-service="restaurant">Order<span class="sr-only"> a Restaurant Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <span class="product-category-tag">Office</span>
+              <a href="#contact" class="product-link" data-service="office-other">Order<span class="sr-only"> Office Uniform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </article>
       </div>
+
+      <p class="other-sectors">
+        We also make uniforms for <strong>nurseries, schools, restaurants and spas</strong>.
+        We have no photographs of those yet — <a href="#contact">contact us to see samples and get a quote</a>.
+      </p>
     </div>
   </section>
 
@@ -453,31 +475,39 @@
     <div class="container">
       <div class="section-header center reveal">
         <span class="section-tag">Gallery</span>
-        <h2>Our product lines</h2>
-        <p class="section-subtitle">Illustrative images of the uniform categories we make.</p>
+        <h2>More from our catalogue</h2>
+        <p class="section-subtitle">Other pieces from our catalogue.</p>
       </div>
       <div class="gallery-grid">
         <figure class="gallery-item reveal">
-          <div class="media"><img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&h=600&fit=crop&q=80" alt="A group of healthcare staff in uniform" width="800" height="600" loading="lazy" decoding="async" class="gallery-photo"></div>
-          <figcaption><strong>Healthcare</strong>Hospital &amp; clinic uniforms</figcaption>
+          <div class="media"><picture>
+            <source srcset="images/g-blouse-mo.webp" type="image/webp">
+            <img src="images/g-blouse-mo.jpg" alt="A long lab coat worn open over a shirt and tie" width="700" height="933" loading="lazy" decoding="async" class="gallery-photo">
+          </picture></div>
+          <figcaption>Long lab coat</figcaption>
         </figure>
         <figure class="gallery-item reveal d1">
-          <div class="media"><img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=600&h=450&fit=crop&q=80" alt="Operating-theatre garments" width="600" height="450" loading="lazy" decoding="async" class="gallery-photo"></div>
-          <figcaption><strong>Theatre</strong>Surgical scrub sets</figcaption>
+          <div class="media"><picture>
+            <source srcset="images/g-dieuduong-dai.webp" type="image/webp">
+            <img src="images/g-dieuduong-dai.jpg" alt="A white long-sleeved nursing set with blue piping" width="700" height="933" loading="lazy" decoding="async" class="gallery-photo">
+          </picture></div>
+          <figcaption>Long-sleeve nursing</figcaption>
         </figure>
         <figure class="gallery-item reveal d2">
-          <div class="media"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=450&fit=crop&q=80" alt="Pupils in uniform" width="600" height="450" loading="lazy" decoding="async" class="gallery-photo"></div>
-          <figcaption><strong>Schools</strong>Uniforms for every year group</figcaption>
+          <div class="media"><picture>
+            <source srcset="images/g-vest-peplum.webp" type="image/webp">
+            <img src="images/g-vest-peplum.jpg" alt="A black peplum jacket with matching skirt" width="700" height="933" loading="lazy" decoding="async" class="gallery-photo">
+          </picture></div>
+          <figcaption>Peplum jacket</figcaption>
         </figure>
-        <figure class="gallery-item reveal">
-          <div class="media"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=450&fit=crop&q=80" alt="Spa staff in uniform" width="600" height="450" loading="lazy" decoding="async" class="gallery-photo"></div>
-          <figcaption><strong>Spa &amp; beauty</strong>Elegant and neat</figcaption>
+        <figure class="gallery-item reveal d3">
+          <div class="media"><picture>
+            <source srcset="images/g-vest-pose.webp" type="image/webp">
+            <img src="images/g-vest-pose.jpg" alt="A fitted black peplum jacket" width="700" height="933" loading="lazy" decoding="async" class="gallery-photo">
+          </picture></div>
+          <figcaption>Fitted peplum</figcaption>
         </figure>
       </div>
-      <p class="gallery-note">
-        These images illustrate the product categories; they are not photographs of orders we have
-        delivered. We will replace them with photographs of our own workshop when available.
-      </p>
     </div>
   </section>
 
@@ -626,11 +656,14 @@
                   <option value="pharmacy">Pharmacist uniform</option>
                   <option value="medical-other">Other medical uniform</option>
                 </optgroup>
-                <optgroup label="Education">
+                <optgroup label="Office &amp; reception">
+                  <option value="reception">Reception uniform</option>
+                  <option value="office-vest">Women&#39;s office jacket</option>
+                  <option value="office-other">Other office uniform</option>
+                </optgroup>
+                <optgroup label="Other sectors">
                   <option value="kindergarten">Nursery uniform</option>
                   <option value="school">School uniform</option>
-                </optgroup>
-                <optgroup label="Hospitality">
                   <option value="spa">Beauty salon uniform</option>
                   <option value="hotel">Hotel uniform</option>
                   <option value="restaurant">Restaurant uniform</option>
@@ -718,7 +751,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Quynh Chau Medical Uniforms. Images on this site are illustrative.</p>
+      <p>&copy; 2026 Quynh Chau Medical Uniforms.</p>
     </div>
   </div>
 </footer>

@@ -208,7 +208,7 @@ section[tabindex="-1"]:focus{outline:none}
 .section-header.center p{margin-inline:auto}
 .section-subtitle{font-size:var(--fs-lg);color:var(--text-muted);margin-top:var(--s4)}
 
-.lead{font-size:var(--fs-lg);line-height:1.65;color:var(--text-muted)}
+.lead{font-size:var(--fs-lg);line-height:1.65;color:var(--text-muted);margin-bottom:var(--s5)}
 
 /* ── Buttons ───────────────────────────────────────────────────────────── */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);
@@ -304,6 +304,7 @@ section[tabindex="-1"]:focus{outline:none}
 .hero-figure{position:relative}
 .media{position:relative;overflow:hidden;border-radius:var(--radius-lg);background:var(--surface-2)}
 .media img{width:100%;height:100%;object-fit:cover;display:block}
+.media picture{display:block;width:100%;height:100%}
 .hero-figure .media{aspect-ratio:4/5;box-shadow:var(--shadow-lg)}
 
 /* Hotlinked photos can fail; a delegated JS handler adds .img-failed (no inline onerror → CSP-safe) */
@@ -320,6 +321,17 @@ section[tabindex="-1"]:focus{outline:none}
 .feature-icon svg{width:22px;height:22px}
 .about-feature h4{margin-bottom:var(--s1)}
 .about-feature p{color:var(--text-muted);font-size:var(--fs-sm);margin:0}
+
+/* Owner portrait caption */
+.owner-figure{margin:0}
+.owner-figure .media{aspect-ratio:4/5}
+.owner-figure figcaption{margin-top:var(--s4);font-size:var(--fs-sm);color:var(--text-muted)}
+.owner-figure figcaption strong{display:block;font-size:var(--fs-base);color:var(--text)}
+
+/* Sectors we make but cannot yet show a photograph of */
+.other-sectors{max-width:none;margin-top:var(--s8);padding:var(--s5);
+  background:var(--surface-2);border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);font-size:var(--fs-sm);color:var(--text-muted)}
 
 /* ── Products ──────────────────────────────────────────────────────────── */
 .product-filter{display:flex;flex-wrap:wrap;gap:var(--s2);margin-bottom:var(--s8)}
@@ -375,9 +387,9 @@ section[tabindex="-1"]:focus{outline:none}
 .process-step p{font-size:var(--fs-sm);color:var(--text-muted);margin:0}
 
 /* ── Gallery ───────────────────────────────────────────────────────────── */
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--gap)}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:var(--gap)}
 .gallery-item{margin:0}
-.gallery-item .media{aspect-ratio:4/3}
+.gallery-item .media{aspect-ratio:3/4}
 .gallery-item figcaption{margin-top:var(--s3);font-size:var(--fs-sm);color:var(--text-muted)}
 .gallery-item figcaption strong{display:block;color:var(--text);font-size:var(--fs-base)}
 .gallery-note{margin-top:var(--s8);padding:var(--s4) var(--s5);background:var(--surface-2);
