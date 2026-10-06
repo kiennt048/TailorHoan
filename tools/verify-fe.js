@@ -64,7 +64,7 @@ for (const f of ['index.html','en.html']) {
   ok(await p.evaluate(()=>!document.querySelector('.owner-figure figcaption')),'owner caption removed');
   ok(await p.evaluate(()=>document.querySelectorAll('.workshop-item').length===4),'4 workshop tiles');
   ok(await p.evaluate(()=>document.querySelectorAll('.badge-illus').length===3),'3 illustration badges (spa card now a real photo)');
-  ok(await p.evaluate(()=>document.querySelectorAll('.product-card').length===13),'13 product cards');
+  ok(await p.evaluate(()=>document.querySelectorAll('.product-card').length===11),'11 product cards');
 
   // filters
   let fres=[];
@@ -72,7 +72,7 @@ for (const f of ['index.html','en.html']) {
     await p.click(`[data-filter="${c}"]`); await p.waitForTimeout(200);
     fres.push(c+'='+await p.evaluate(()=>[...document.querySelectorAll('.product-card')].filter(x=>!x.hidden).length));
   }
-  ok(fres.join(' ')==='medical=6 office=3 education=2 hospitality=2 all=13','filters '+fres.join(' '));
+  ok(fres.join(' ')==='medical=4 office=3 education=2 hospitality=2 all=11','filters '+fres.join(' '));
 
   // overflow at three widths
   for (const w of [1440,768,360]) {

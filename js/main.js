@@ -109,6 +109,144 @@
     });
   }
 
+  /* ── Auto-hide header: hides when idle, reveals on mouse hover / scroll ── */
+  function initAutoHideHeader() {
+    var header = $('.header');
+    if (!header) return;
+
+    var IDLE_DELAY = 2800;
+    var idleTimer = null;
+    var isHovered = false;
+    var isFocused = false;
+    var isPointerAtTop = false;
+
+    function isMenuOpen() {
+      var toggle = $('#navToggle');
+      return toggle && toggle.getAttribute('aria-expanded') === 'true';
+    }
+
+    function showHeader() {
+      if (header.classList.contains('header--hidden')) {
+        header.classList.remove('header--hidden');
+      }
+    }
+
+    function hideHeader() {
+      if (isHovered || isFocused || isPointerAtTop || isMenuOpen()) return;
+      header.classList.add('header--hidden');
+    }
+
+    function clearIdleTimer() {
+      if (idleTimer) {
+        clearTimeout(idleTimer);
+        idleTimer = null;
+      }
+    }
+
+    function resetIdleTimer(delay) {
+      clearIdleTimer();
+      if (isHovered || isFocused || isPointerAtTop || isMenuOpen()) return;
+      idleTimer = setTimeout(function () {
+        hideHeader();
+      }, delay || IDLE_DELAY);
+    }
+
+    function getHeaderThreshold() {
+      return (header.offsetHeight || 68) + 10;
+    }
+
+    // 1. Mouse enters or leaves header directly
+    header.addEventListener('mouseenter', function () {
+      isHovered = true;
+      clearIdleTimer();
+      showHeader();
+    });
+
+    header.addEventListener('mouseleave', function () {
+      isHovered = false;
+      resetIdleTimer();
+    });
+
+    // 2. Cursor movement towards top of viewport reveals header
+    window.addEventListener('mousemove', function (e) {
+      var threshold = getHeaderThreshold();
+      if (e.clientY <= threshold) {
+        isPointerAtTop = true;
+        clearIdleTimer();
+        showHeader();
+      } else {
+        if (isPointerAtTop) {
+          isPointerAtTop = false;
+          if (!isHovered) resetIdleTimer();
+        }
+      }
+    }, { passive: true });
+
+    document.addEventListener('mouseleave', function () {
+      isPointerAtTop = false;
+      isHovered = false;
+      resetIdleTimer();
+    });
+
+    // 3. Scroll interactions (kéo trang lên xuống)
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          var scrollY = window.scrollY || window.pageYOffset || 0;
+          if (scrollY > 10) {
+            header.classList.add('header--scrolled');
+          } else {
+            header.classList.remove('header--scrolled');
+          }
+
+          showHeader();
+          resetIdleTimer();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // 4. Touch interactions (mobile / tablet tap near top)
+    window.addEventListener('touchstart', function (e) {
+      if (e.touches && e.touches[0] && e.touches[0].clientY <= getHeaderThreshold()) {
+        isPointerAtTop = true;
+        showHeader();
+        resetIdleTimer();
+      }
+    }, { passive: true });
+
+    // 5. Keyboard accessibility
+    header.addEventListener('focusin', function () {
+      isFocused = true;
+      clearIdleTimer();
+      showHeader();
+    });
+
+    header.addEventListener('focusout', function () {
+      isFocused = false;
+      resetIdleTimer();
+    });
+
+    // 6. When mobile menu is closed, restart idle timer
+    var toggle = $('#navToggle');
+    if (toggle && window.MutationObserver) {
+      var observer = new MutationObserver(function () {
+        if (!isMenuOpen()) {
+          resetIdleTimer();
+        } else {
+          clearIdleTimer();
+          showHeader();
+        }
+      });
+      observer.observe(toggle, { attributes: true, attributeFilter: ['aria-expanded'] });
+    }
+
+    // 7. Initial state: display header on load, then auto-hide after 3.2s of inactivity
+    resetIdleTimer(3200);
+  }
+
   /* ── Active nav link (IntersectionObserver, not a per-scroll offsetTop loop) ── */
   function initActiveNav() {
     var links = $$('.nav-link[href^="#"]');
@@ -169,9 +307,50 @@
     apply('all');
   }
 
+  /* ── Product card clickable link navigation & hash redirects ────────── */
+  function initProductCardLinks() {
+    $$('.product-card[data-href]').forEach(function (card) {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function (e) {
+        if (e.target.closest('a, button')) return;
+        var href = card.getAttribute('data-href');
+        if (href) {
+          window.location.href = href;
+        }
+      });
+      card.addEventListener('keydown', function (e) {
+        if (e.target.closest('a, button')) return;
+        if (e.key === 'Enter' || e.key === ' ') {
+          var href = card.getAttribute('data-href');
+          if (href) {
+            e.preventDefault();
+            window.location.href = href;
+          }
+        }
+      });
+    });
+
+    // Support legacy deep links from hash to dedicated pages
+    var h = window.location.hash || '';
+    if (h.indexOf('#san-pham-') === 0) {
+      var id = h.slice('#san-pham-'.length);
+      var targetFile = 'san-pham-' + id + '.html';
+      if (document.querySelector('.product-card[data-href="' + targetFile + '"]')) {
+        window.location.href = targetFile;
+      }
+    } else if (h.indexOf('#product-') === 0) {
+      var idEn = h.slice('#product-'.length);
+      var targetFileEn = 'product-' + idEn + '.html';
+      if (document.querySelector('.product-card[data-href="' + targetFileEn + '"]')) {
+        window.location.href = targetFileEn;
+      }
+    }
+  }
+
   /* ── Product card CTA carries the product through to the form ── */
   function initServicePrefill() {
     $$('.product-link[data-service]').forEach(function (link) {
+      if (link.closest('.product-card')) return; // handled by product modal
       link.addEventListener('click', function () {
         var sel = $('#service');
         if (!sel) return;
@@ -349,9 +528,11 @@
   function init() {
     applyConfig();
     initNav();
+    initAutoHideHeader();
     initActiveNav();
     initLangLinks();
     initProductFilter();
+    initProductCardLinks();
     initServicePrefill();
     initImageFallback();
     initReveal();

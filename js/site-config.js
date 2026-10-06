@@ -27,8 +27,9 @@ window.SITE_CONFIG = {
 
   /* Địa chỉ xưởng / cửa hàng, dùng <br> để xuống dòng.
      Hậu tố _en = bản tiếng Anh, tự dùng cho en.html (áp dụng cho mọi trường). */
-  address: "TP. Hồ Chí Minh",
-  address_en: "Ho Chi Minh City",
+  address: "5 Số 2, Bình Hưng, Hồ Chí Minh, Việt Nam",
+  address_en: "5 No. 2, Binh Hung, Ho Chi Minh City, Vietnam",
+  mapUrl: "https://maps.app.goo.gl/tfkqRLebCyqhTqq78",
 
   /* Giờ làm việc — 2 dòng */
   hours: "",
